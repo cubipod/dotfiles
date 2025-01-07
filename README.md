@@ -11,6 +11,7 @@ $ sudo dnf install git stow
 
 2) Clone this repository into your home directory using Git
 ```
+$ cd ~/
 $ git clone git@github.com/cubipod/dotfiles.git
 $ cd dotfiles
 ```
