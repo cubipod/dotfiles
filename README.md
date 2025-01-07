@@ -9,7 +9,7 @@ though I see no reason other distros shouldn't work with these. Feel free to cop
 $ sudo dnf install git stow
 ```
 
-2) First, clone this repository into your home directory using Git
+2) Clone this repository into your home directory using Git
 ```
 $ git clone git@github.com/cubipod/dotfiles.git
 $ cd dotfiles
