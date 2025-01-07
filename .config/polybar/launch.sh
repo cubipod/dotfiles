@@ -1,4 +1,4 @@
-#!/user/bin/env bash
+#!/usr/bin/env bash
 
 # Terminate already running bars
 polybar-msg cmd quit
