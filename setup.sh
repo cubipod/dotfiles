@@ -42,7 +42,7 @@ load_configurations() {
 
   echo "Installing TMUX plugins..."
   git clone https://github.com/tmux-plugins/tpm $HOME_DIR/.tmux/plugins/tpm
-  bash $HOME_DIR/.tmux/plugins/tpm/bin/install-plugins
+  bash $HOME_DIR/.tmux/plugins/tpm/bin/install_plugins
   tmux source $HOME_DIR/.tmux.conf
 
   echo "Getting background..."
