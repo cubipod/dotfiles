@@ -31,7 +31,7 @@ load_configurations() {
   chsh -s $(which zsh)
 
   echo "Copying dotfiles..."
-  stow --delete -d ./configurations .
+  stow --restow ./configurations
 
   echo "Installing TMUX plugins"
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
