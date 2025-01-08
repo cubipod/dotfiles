@@ -4,6 +4,7 @@ if [[ $EUID -ne 0 ]]; then
   echo "This script must be run as root. Please run with sudo or as the root user."
   exit 1
 fi
+cd "$(dirname "$0")" || exit 1
 
 install_packages() {
   echo "Installing packages..."
@@ -17,12 +18,12 @@ install_packages() {
 
 install_fonts() {
   echo "Installing fonts..."
-  mkdir ./temp
+  mkdir .temp
   curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz
   tar -xf Hack.tar.xz -C ./temp
-  sudo mv ./temp/*.ttf /usr/share/fonts
+  sudo mv .temp/*.ttf /usr/share/fonts
   fc-cache -f
-  rm -rf ./temp Hack.tar.xz
+  rm -rf .temp Hack.tar.xz
   echo "Font installation successful" 
 }
 
@@ -31,9 +32,9 @@ load_configurations() {
   chsh -s $(which zsh)
 
   echo "Loading configurations..."
-  stow -t ~ configurations
+  sudo stow -t ~ configurations
 
-  echo "Installing TMUX plugins"
+  echo "Installing TMUX plugins..."
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   bash ~/.tmux/plugins/tpm/bin/install-plugins
   tmux source ~/.tmux.conf
