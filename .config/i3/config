@@ -45,7 +45,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # Start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec alacritty -e tmux
 
 # Kill focused window
 bindsym $mod+Shift+q kill
