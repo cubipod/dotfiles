@@ -5,7 +5,9 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-HOME_DIR="/home/$(logname)"
+# Misc variables
+USERNAME="$(logname)"
+HOME_DIR="/home/$USERNAME"
 
 install_packages() {
   echo "Installing packages..."
@@ -31,9 +33,9 @@ install_fonts() {
 
 load_configurations() {
   echo "Configuring shell (zsh)..."
-  chsh -s $(which zsh) "$USER"
   chsh -s $(which zsh)
   curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  chsh -s $(which zsh) $USERNAME
 
   echo "Loading configurations..."
   sudo stow -t $HOME_DIR configurations
