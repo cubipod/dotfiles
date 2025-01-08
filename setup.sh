@@ -31,6 +31,7 @@ install_fonts() {
 
 load_configurations() {
   echo "Configuring shell (zsh)..."
+  chsh -s $(which zsh) "$USER"
   chsh -s $(which zsh)
   curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
