@@ -33,6 +33,7 @@ load_configurations() {
   echo "Loading configurations..."
   stow configurations/i3
   stow configurations/polybar
+  stow configurations/tmux
 
   echo "Installing TMUX plugins"
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
