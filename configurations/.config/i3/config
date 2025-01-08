@@ -11,6 +11,7 @@ for_window [class="^.*"] border pixel 0
 
 # Startup
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/Quiet_by_Denis_Istomin.jpg
 
 # Set the window title font
 font pango:monospace 8
