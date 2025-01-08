@@ -7,8 +7,9 @@ whatever you need!
 > This is a work in progress and is nowhere near complete! I don't recommend copying anything here yet!
 
 ## Installation
-1. Ensure that Git is installed on your system
+1. Ensure that the system is updated and Git is installed
 ```
+$ sudo dnf upgrade
 $ sudo dnf install git
 ```
 2. Clone this repository into your home directory using Git
