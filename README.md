@@ -19,6 +19,6 @@ $ cd dotfiles
 ```
 3. Run the install script
 ```
-$ ./setup.sh
+$ sudo ./setup.sh
 ```
 4. If it's a new machine, select **All of the above**
