@@ -34,8 +34,8 @@ install_fonts() {
 load_configurations() {
   echo "Configuring shell (zsh)..."
   chsh -s $(which zsh)
-  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
   chsh -s $(which zsh) $USERNAME
+  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
   echo "Loading configurations..."
   sudo stow -t $HOME_DIR configurations
