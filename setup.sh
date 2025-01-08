@@ -37,9 +37,13 @@ load_configurations() {
   sudo stow -t $HOME_DIR configurations
 
   echo "Installing TMUX plugins..."
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm $HOME_DIR/.tmux/plugins/tpm
   bash $HOME_DIR/.tmux/plugins/tpm/bin/install-plugins
   tmux source $HOME_DIR/.tmux.conf
+
+  echo "Setting background..."
+  wget "https://cdnb.artstation.com/p/assets/images/images/006/189/743/large/denis-istomin-sky-110517-b-v2-2-f.jpg?1496688610" -O $HOME_DIR/Pictures/Quiet_by_Denis_Istomin.jpg
+  feh --bg-fill $HOME_DIR/Pictures/Quiet_by_Denis_Istomin.jpg
 }
 
 reload_all() {
