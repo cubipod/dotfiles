@@ -51,7 +51,8 @@ reload_all() {
 execute_all() {
   install_packages
   install_fonts
-  load_configurations 
+  load_configurations
+  reload_all 
 }
 
 echo "Please select what you'd like to do"
