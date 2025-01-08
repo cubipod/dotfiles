@@ -9,9 +9,11 @@ The programs these dotfiles are for can be installed like so
 $ sudo dnf install i3 polybar alacritty
 ```
 ### What are these programs?
-[alacritty](https://github.com/alacritty/alacritty) is a terminal emulator
+[Alacritty](https://github.com/alacritty/alacritty) is a terminal emulator
+
 [i3](https://github.com/i3/i3) is a tiling window manager
-[polybar](https://github.com/polybar/polybar) is an information bar (ex: displaying the time)
+
+[Polybar](https://github.com/polybar/polybar) is an information bar (ex: displaying the time)
 
 ## Installation
 1) Ensure that Git and GNU Stow are installed on your system
