@@ -55,7 +55,16 @@ execute_all() {
   install_packages
   install_fonts
   load_configurations
-  reload_all 
+  reload_all
+}
+
+reboot_now() {
+  echo "Setup complete. Rebooting..."
+  reboot
+}
+
+dont_reboot() {
+  echo "Setup complete. Some changes might not be visible until the next reboot."
 }
 
 echo "Please select what you'd like to do"
@@ -74,4 +83,11 @@ case $choice in
   4) reload_all ;;
   5) execute_all ;;
   *) echo "Invalid option, please try again"
+esac
+
+read -p "A reboot is required in order to apply some of the changes. Would you like to do this now? [y/n]" reboot_choice
+case $reboot_choice in
+  y) reboot_now ;;
+  n) dont_reboot ;;
+  *) echo "Invalid option, skipping reboot." ;;
 esac
