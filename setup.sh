@@ -30,8 +30,9 @@ install_fonts() {
 }
 
 load_configurations() {
-  echo "Setting zsh as the default shell..."
+  echo "Configuring shell (zsh)..."
   chsh -s $(which zsh)
+  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 
   echo "Loading configurations..."
   sudo stow -t $HOME_DIR configurations
