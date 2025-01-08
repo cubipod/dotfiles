@@ -29,5 +29,5 @@ You will also need the [Hack](https://github.com/ryanoasis/nerd-fonts/releases/l
 Once you've downloaded and extracted it, you can install the fonts by moving them to /usr/share/fonts, like so:
 ```
 $ sudo mv *.ttf /usr/share/fonts
-$ sudo fc-cache -fv
+$ fc-cache -fv
 ```
