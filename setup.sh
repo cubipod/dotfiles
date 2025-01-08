@@ -4,7 +4,8 @@ if [[ $EUID -ne 0 ]]; then
   echo "This script must be run as root. Please run with sudo or as the root user."
   exit 1
 fi
-cd "$(dirname "$0")" || exit 1
+
+HOME_DIR="/home/$(logname)"
 
 install_packages() {
   echo "Installing packages..."
@@ -32,19 +33,19 @@ load_configurations() {
   chsh -s $(which zsh)
 
   echo "Loading configurations..."
-  sudo stow -t ~ configurations
+  sudo stow -t $HOME_DIR configurations
 
   echo "Installing TMUX plugins..."
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  bash ~/.tmux/plugins/tpm/bin/install-plugins
-  tmux source ~/.tmux.conf
+  bash $HOME_DIR/.tmux/plugins/tpm/bin/install-plugins
+  tmux source $HOME_DIR/.tmux.conf
 }
 
 reload_all() {
   echo "Reloading..."
   fc-cache -f
   i3-msg restart
-  tmux source ~/.tmux.conf
+  tmux source $HOME_DIR/.tmux.conf
   echo "Reload successful"
   echo "Note: Some apps need to be closed to reload. This includes: Alacritty"
 }
