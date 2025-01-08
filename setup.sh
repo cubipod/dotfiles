@@ -35,16 +35,18 @@ load_configurations() {
   echo "Configuring shell (zsh)..."
   chsh -s $(which zsh)
   chsh -s $(which zsh) $USERNAME
-  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
   echo "Loading configurations..."
   sudo stow -t $HOME_DIR configurations
 
   echo "Installing TMUX plugins..."
   mkdir -p $HOME_DIR/.tmux/plugins/tmux-sensible
+  mkdir -p $HOME_DIR/.tmux/plugins/tmux-plugins/cpu
   mkdir -p $HOME_DIR/.tmux/plugins/catppuccin/tmux
   git clone https://github.com/tmux-plugins/tmux-sensible.git $HOME_DIR/.tmux/plugins/tmux-sensible
   git clone https://github.com/catppuccin/tmux.git $HOME_DIR/.tmux/plugins/catppuccin/tmux
+  git clone https://github.com/tmux-plugins/tmux-cpu $HOME_DIR/.tmux/plugins/tmux-plugins/cpu
   tmux source $HOME_DIR/.tmux.conf
 
   echo "Getting background..."
