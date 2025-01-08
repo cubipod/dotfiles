@@ -41,9 +41,10 @@ load_configurations() {
   sudo stow -t $HOME_DIR configurations
 
   echo "Installing TMUX plugins..."
-  git clone https://github.com/tmux-plugins/tpm.git $HOME_DIR/.tmux/plugins/tpm
+  mkdir -p $HOME_DIR/.tmux/plugins/tmux-sensible
+  mkdir -p $HOME_DIR/.tmux/plugins/catppuccin/tmux
   git clone https://github.com/tmux-plugins/tmux-sensible.git $HOME_DIR/.tmux/plugins/tmux-sensible
-  git clone https://github.com/catppuccin/tmux $HOME_DIR/.tmux/plugins/catppuccin
+  git clone https://github.com/catppuccin/tmux.git $HOME_DIR/.tmux/plugins/catppuccin/tmux
   tmux source $HOME_DIR/.tmux.conf
 
   echo "Getting background..."
