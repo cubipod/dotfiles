@@ -1,0 +1,14 @@
+# Alacritty Config
+
+[env]
+term = "xterm-256color"
+
+[window]
+opacity = 0.9
+padding.x = 5
+padding.y = 0
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[font]
+normal.family = "Hack Nerd Font"

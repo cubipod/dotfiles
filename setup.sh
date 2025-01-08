@@ -21,10 +21,11 @@ install_fonts() {
   echo "Installing fonts..."
   mkdir .temp
   curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.tar.xz
-  tar -xf Hack.tar.xz -C ./temp
+  tar -xf Hack.tar.xz -C .temp
   sudo mv .temp/*.ttf /usr/share/fonts
   fc-cache -f
-  rm -rf .temp Hack.tar.xz
+  rm -rf .temp
+  rm -rf Hack.tar.xz
   echo "Font installation successful" 
 }
 
