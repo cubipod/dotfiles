@@ -1,5 +1,3 @@
-i3
-git
 polybar
 stow
 tmux
