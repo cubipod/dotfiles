@@ -31,10 +31,8 @@ load_configurations() {
   chsh -s $(which zsh)
 
   echo "Loading configurations..."
-  cd configurations
-  stow i3
-  stow polybar
-  stow tmux
+  cd ./configurations
+  stow .
   cd -
 
   echo "Installing TMUX plugins"
