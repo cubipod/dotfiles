@@ -30,8 +30,9 @@ load_configurations() {
   echo "Setting zsh as the default shell..."
   chsh -s $(which zsh)
 
-  echo "Copying dotfiles..."
-  stow --restow ./configurations
+  echo "Loading configurations..."
+  stow configurations/i3
+  stow configurations/polybar
 
   echo "Installing TMUX plugins"
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
