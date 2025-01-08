@@ -21,7 +21,7 @@ $ stow .
 ```
 
 ## Packages
-You can install the various required packages (i3, alacritty, etc.) using the includded install script, like so:
+You can install the various required packages (i3, alacritty, etc.) using the included install script, like so:
 ```
 $ cd dotfiles
 $ ./dnf-install-packages.sh
