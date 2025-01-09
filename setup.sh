@@ -35,7 +35,8 @@ load_configurations() {
   echo "Configuring shell (zsh)..."
   chsh -s $(which zsh)
   chsh -s $(which zsh) $USERNAME
-  curl -s https://ohmyposh.dev/install.sh | bash -s
+  mkdir -p $HOME_DIR/bin
+  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME_DIR/bin
 
   echo "Loading configurations..."
   sudo stow -t $HOME_DIR configurations
