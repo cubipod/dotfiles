@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [[ $EUID -ne 0 ]]; then
+  echo "This script must be run as root. Please run with sudo or as the root user."
+  exit 1
+fi
+
 # Misc variables
 USERNAME="$(logname)"
 HOME_DIR="/home/$USERNAME"
@@ -30,7 +35,7 @@ load_configurations() {
   echo "Configuring shell (zsh)..."
   chsh -s $(which zsh)
   chsh -s $(which zsh) $USERNAME
-  curl -s https://ohmyposh.dev/install.sh | bash -s
+  sudo -u $USERNAME curl -s https://ohmyposh.dev/install.sh | bash -s
 
   echo "Loading configurations..."
   stow -t $HOME_DIR configurations
