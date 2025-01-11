@@ -2,4 +2,5 @@ alacritty
 polybar
 stow
 tmux
+xcompmgr
 zsh

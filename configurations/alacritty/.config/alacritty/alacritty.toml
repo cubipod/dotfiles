@@ -1,0 +1,22 @@
+# Alacritty Config
+[terminal]
+shell "$(which zsh)"
+
+[colors.primary]
+background = "#111114"
+
+[window]
+opacity = 0.85
+padding = { x = 5, y = 5 }
+decorations = "None"
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[font]
+normal.family = "Hack Nerd Font"
+size = 12
