@@ -37,19 +37,14 @@ load_configurations() {
   chsh -s $(which zsh) $USERNAME
   mkdir -p $HOME_DIR/.local/bin
 
-  echo "Inserting dot=files..."
+  echo "Inserting dotfiles..."
   stow -t $HOME_DIR configurations
 
   echo "Installing TMUX plugins..."
-  mkdir -p $HOME_DIR/.tmux/plugins/tmux-sensible
-  mkdir -p $HOME_DIR/.tmux/plugins/tmux-plugins/cpu
-  mkdir -p $HOME_DIR/.tmux/plugins/catppuccin/tmux
-  git clone https://github.com/tmux-plugins/tmux-sensible.git $HOME_DIR/.tmux/plugins/tmux-sensible
-  git clone https://github.com/catppuccin/tmux.git $HOME_DIR/.tmux/plugins/catppuccin/tmux
-  git clone https://github.com/tmux-plugins/tmux-cpu $HOME_DIR/.tmux/plugins/tmux-plugins/cpu
-  tmux source $HOME_DIR/.tmux.conf
+  mkdir -p $HOME_DIR/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm $HOME_DIR/.tmux/plugins/tpm
 
-  echo "Getting background..."
+  echo "Dowloading desktop background..."
   wget "https://cdnb.artstation.com/p/assets/images/images/006/189/743/large/denis-istomin-sky-110517-b-v2-2-f.jpg?1496688610" -O $HOME_DIR/Pictures/Quiet_by_Denis_Istomin.jpg
 }
 
