@@ -1,6 +1,6 @@
 # Alacritty Config
 [terminal]
-shell "$(which zsh)"
+shell = "$(which zsh)"
 
 [colors.primary]
 background = "#111114"

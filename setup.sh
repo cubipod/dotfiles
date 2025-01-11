@@ -36,7 +36,6 @@ load_configurations() {
   chsh -s $(which zsh)
   chsh -s $(which zsh) $USERNAME
   mkdir -p $HOME_DIR/.local/bin
-  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME_DIR/.local/bin -t $HOME_DIR/.cache/oh-my-posh/themes
 
   echo "Inserting dot=files..."
   stow -t $HOME_DIR configurations
