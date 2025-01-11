@@ -39,11 +39,11 @@ load_configurations() {
   curl -s https://ohmyposh.dev/install.sh | bash -s -- -d $HOME_DIR/.local/bin -t $HOME_DIR/.cache/oh-my-posh/themes
 
   echo "Inserting dot=files..."
-  stow -t $HOME_DIR ./configurations/alacritty
-  stow -t $HOME_DIR ./configurations/i3
-  stow -t $HOME_DIR ./configurations/polybar
-  stow -t $HOME_DIR ./configurations/tmux
-  stow -t $HOME_DIR ./configurations/zsh
+  stow -t $HOME_DIR configurations/alacritty
+  stow -t $HOME_DIR configurations/i3
+  stow -t $HOME_DIR configurations/polybar
+  stow -t $HOME_DIR configurations/tmux
+  stow -t $HOME_DIR configurations/zsh
 
   echo "Installing TMUX plugins..."
   mkdir -p $HOME_DIR/.tmux/plugins/tmux-sensible
