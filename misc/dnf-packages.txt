@@ -1,5 +1,6 @@
 alacritty
 fzf
+neovim
 polybar
 stow
 tmux
