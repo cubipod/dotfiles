@@ -31,14 +31,13 @@ install() {
   rm -rf Hack.tar.xz
   echo "Font installation successful"
 
-  # Configure Zsh
-  echo "Configuring shell (zsh)..."
+  # Configure terminal
+  echo "Configuring the terminal..."
   chsh -s $(which zsh)
   chsh -s $(which zsh) $USERNAME
   mkdir -p $HOME_DIR/.local/bin
-
-  echo "Configuring neovim..."
-  git clone https://github.com/NvChad/NvChad $HOME_DIR/.config/nvim --depth 1
+  git clone https://github.com/NvChad/starter $HOME_DIR/.config/nvim
+  git clone https://github.com/tmux-plugins/tpm $HOME_DIR/.tmux/plugins/tpm
 
   # Add dotfiles
   echo "Inserting dotfiles..."
